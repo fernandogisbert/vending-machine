@@ -82,14 +82,13 @@ let coordenadas10 = [filaOnduladas.onduladas1[0],onduladas];
 let coordenadas11 = [filaOnduladas.onduladas2[0],onduladas];
 let coordenadas12 = [filaOnduladas.onduladas3[0],onduladas];
 
-console.log(coordenadas12);
 
     //Función + llamadas
 
 function sellProduct([coordenadas,producto]){
     
     coordenadas.addEventListener('click',()=>{
-        
+
         displayMessage =`<p>Comprobando el pago</p>`,
         display.innerHTML = displayMessage,
         setTimeout(()=>{
@@ -126,12 +125,11 @@ function checkPayment(){
                 sellProduct(coordenadas9),
                 sellProduct(coordenadas10),
                 sellProduct(coordenadas11),
-                sellProduct(coordenadas12)
+                sellProduct(coordenadas12),
             );
         }else{
             reject(
-                displayMessage =`<p>Conexión inestable</p>
-                                 <p>Refresque la página</p>`,
+                displayMessage =`<p>Conexión inestable</p>`,
                 display.innerHTML = displayMessage,
                 // console.log('conexión inestable')
             );
@@ -139,7 +137,7 @@ function checkPayment(){
     });
 };
 
-checkPayment();
+ checkPayment();
 
 
 
