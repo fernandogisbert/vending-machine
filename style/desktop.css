@@ -1,0 +1,108 @@
+/* grid */
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+
+.display {
+    height: 10rem;
+    width:20rem;
+    border:3px solid black;
+}
+
+.maquina {
+    width: 800px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.maquina__borde {
+    border: 2px solid black;
+
+}
+
+.maquina > div > img {
+    width:4rem;
+    margin-left:6rem;
+    margin-top: 1rem;
+}
+
+.cerveza1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.cerveza2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.cerveza3 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.cocacola1 {
+    grid-column:1 / 2;
+    grid-row: 2 / 3;
+}
+
+
+.cocacola2 {
+    grid-column:2 / 3;
+    grid-row: 2 / 3;
+}
+
+
+.cocacola3 {
+    grid-column:3 / 4;
+    grid-row: 2 / 3;
+}
+
+.campesinas1 {
+    grid-column:1 / 2;
+    grid-row: 3 / 4;
+}
+
+.campesinas2 {
+    grid-column:2 / 3;
+    grid-row: 3 / 4;
+}
+
+.campesinas3 {
+    grid-column:3 / 4;
+    grid-row: 3 / 4;
+}
+
+.onduladas1 {
+    grid-column:1 / 2;
+    grid-row: 4 / 5;
+}
+
+.onduladas2 {
+    grid-column:2 / 3;
+    grid-row: 4 / 5;
+}
+
+.onduladas3 {
+    grid-column:3 / 4;
+    grid-row: 4 / 5;
+}
+
+.bandeja {
+    grid-column: 1 / 4;
+    grid-row: 5 / 6;
+    height: 10rem;
+    display: flex;
+    justify-content:center;
+}
+
+.bandeja > img {
+    width:auto !important;
+    height: 8rem;
+    margin-left:0 !important;
+    object-fit: cover;
+}
+
+
