@@ -116,7 +116,7 @@ function checkPayment(producto,coordenadas){
     let probabilidad = Math.floor(Math.random() * 11); 
 
     return new Promise((resolve, reject) =>{
-        if (probabilidad <=9){
+        if (probabilidad < 9 ){
             resolve( 
                 console.log('funciona correctamente'),
                 setTimeout(()=>{
