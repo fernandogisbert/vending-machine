@@ -1,22 +1,54 @@
-
+body {
+    margin: 0;
+}
 
 /* grid */
 .main{
     display: flex;
     justify-content: center;
+    background-image: url(../img/background.png);
+    background-size: cover;
+}
+
+.display__top {
+    height: 2rem;
+    background-color:yellow;
+    border-top: 3px solid black;
 }
 
 .display {
     height: 7rem;
     width:20rem;
-    border-top:3px solid black;
-    border-bottom:36rem solid black;
-    border-right:3px solid black;
+    border:3px solid black;
     font-family: 'Press Start 2P', cursive;
     background-color: rgb(224, 224, 224);
     color:red;
     text-transform: uppercase;
     padding: 1rem;
+}
+
+.relleno {
+    background-color:yellow;
+    height: 36.5rem;
+    border-bottom:3px solid black;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.relleno__derecha {
+    background-color: yellow;
+    height: 47.9rem;
+    width:2rem;
+    border-right:3px solid black;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+.logo {
+    width:16rem;
+    height: 16rem;
 }
 
 .maquina {
@@ -27,8 +59,9 @@
     grid-template-rows: 1fr 1fr 1fr 1fr;
     background-color: yellow;
     padding: 2rem;
-    border:3px solid black;
-
+    border-left:3px solid black;
+    border-top:3px solid black;
+    border-bottom:3px solid black;
 }
 
 .maquina__borde {

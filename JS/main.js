@@ -91,53 +91,55 @@ function sellProduct([coordenadas,producto]){
 
         displayMessage =`<p>Comprobando el pago</p>`,
         display.innerHTML = displayMessage,
-        setTimeout(()=>{
-            producto.sold();
-            recojer = coordenadas.lastElementChild.outerHTML;
-            bandeja.innerHTML = recojer;
-
-        },3000)
+        // promesa declarada más abajo
+        checkPayment(producto,coordenadas);
     })
 }
 
+sellProduct(coordenadas1);
+sellProduct(coordenadas2);
+sellProduct(coordenadas3);
+sellProduct(coordenadas4);
+sellProduct(coordenadas5);
+sellProduct(coordenadas6);
+sellProduct(coordenadas7);
+sellProduct(coordenadas8);
+sellProduct(coordenadas9);
+sellProduct(coordenadas10);
+sellProduct(coordenadas11);
+sellProduct(coordenadas12);
 
 // tema promesas
 
-let probabilidad = Math.floor(Math.random() * 11); 
+function checkPayment(producto,coordenadas){
 
+    let probabilidad = Math.floor(Math.random() * 11); 
 
-function checkPayment(){
-
-    
     return new Promise((resolve, reject) =>{
         if (probabilidad <=9){
-            resolve(
-                
+            resolve( 
                 console.log('funciona correctamente'),
-                sellProduct(coordenadas1),
-                sellProduct(coordenadas2),
-                sellProduct(coordenadas3),
-                sellProduct(coordenadas4),
-                sellProduct(coordenadas5),
-                sellProduct(coordenadas6),
-                sellProduct(coordenadas7),
-                sellProduct(coordenadas8),
-                sellProduct(coordenadas9),
-                sellProduct(coordenadas10),
-                sellProduct(coordenadas11),
-                sellProduct(coordenadas12),
+                setTimeout(()=>{
+                    producto.sold();
+                    recojer = coordenadas.lastElementChild.outerHTML;
+                    bandeja.innerHTML = recojer;
+                },3000)
             );
         }else{
             reject(
-                displayMessage =`<p>Conexión inestable</p>`,
-                display.innerHTML = displayMessage,
+                setTimeout(()=>{
+                    displayMessage =`<p>Conexión inestable</p>`;
+                    display.innerHTML = displayMessage;
+    
+                },3000)
+                
                 // console.log('conexión inestable')
             );
         }
     });
 };
 
- checkPayment();
 
 
 
+ 
